@@ -1,3 +1,52 @@
+body.theme-dark {
+	/* Core Backgrounds */
+	--background-primary: #0f0f0f;
+	--background-primary-alt: #0e0e0e;
+	--background-secondary: #0e0e0e;
+	--background-secondary-alt: #1b1b1b;
+	--background-modifier-hover: #191919;
+	--background-modifier-border: #313131;
+
+	/* Text Colors */
+	--text-normal: #f0f0f5;
+	--text-muted: #4c4c4c;
+	--text-faint: #303030;
+	--text-on-accent: #0f0f0f;
+
+	/* Accents - Using Purple as primary */
+	--interactive-accent: #bb7cff;
+	--interactive-accent-hover: #fd7cff;
+	--text-accent: #bb7cff;
+	--text-accent-hover: #fd7cff;
+	--text-selection: rgba(187, 124, 255, 0.25);
+
+	/* Functional Colors */
+	--text-error: #ff004b;
+	--text-success: #42ff97;
+	--text-warning: #ff7c7e;
+
+	/* UI Elements */
+	--scrollbar-active-thumb-bg: #4c4c4c;
+	--scrollbar-thumb-bg: rgba(76, 76, 76, 0.5);
+	--tab-outline-color: #313131;
+	--hr-color: #313131;
+
+	/* Code Syntax Highlighting */
+	--code-normal: #f0f0f5;
+	--code-comment: #4c4c4c;
+	--code-function: #29adff;
+	--code-keyword: #bb7cff;
+	--code-value: #ff7c7e;
+	--code-string: #42ff97;
+	--code-tag: #2cbecf;
+	--code-property: #70c8ff;
+
+	/* Git Gutter */
+	--color-git-added: #144f36;
+	--color-git-modified: #004f4d;
+	--color-git-deleted: #4f0017;
+}
+
 body {
 	--radius-s: 0px;
 	--radius-m: 0px;
@@ -10,7 +59,8 @@ body {
 	--slider-thumb-radius: 0px;
 }
 
-.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
+.workspace-tab-header.is-active::before,
+.workspace-tab-header.is-active::after {
 	display: none;
 }
 
