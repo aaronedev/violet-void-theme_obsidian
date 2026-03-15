@@ -15,12 +15,12 @@
 
 ## 🟡 Medium Priority
 
-- [ ] **Palette Sync**
+- [x] **Palette Sync** (27d206e)
   - Verify all colors match ecosystem palette
   - Use `--base*` naming where possible
   - Document any Obsidian-specific overrides
 
-- [ ] **Code Highlighting**
+- [x] **Code Highlighting** (27d206e)
   - Sync syntax colors with tmTheme
   - Add language-specific overrides if needed
 
