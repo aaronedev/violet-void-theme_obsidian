@@ -2,7 +2,7 @@
 
 ## 🔥 High Priority
 
-- [ ] **Modern CSS Features**
+- [x] **Modern CSS Features** (d15c919)
   - Add `@layer` for cascade control
   - Add `@property` for animatable vars
   - Add `:has()` selector usage
@@ -11,7 +11,7 @@
 - [x] **Accessibility** (da1d5f4)
   - Add `prefers-reduced-motion` media query
   - Add `prefers-reduced-transparency` media query
-  - [ ] Add `prefers-contrast` support
+  - [x] Add `prefers-contrast` support
 
 ## 🟡 Medium Priority
 
