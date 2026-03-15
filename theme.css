@@ -1,6 +1,16 @@
 /* Violet Void Obsidian Theme
  * Pure CSS with custom properties
+ * 
+ * Palette Reference: ../palette-extended/violet-void-palette.css
+ * 
+ * Obsidian-specific overrides documented inline.
+ * Uses --base* prefix for Obsidian's internal variable naming.
  */
+
+/* ================================
+   Import Violet Void Palette
+   ================================ */
+@import url("../palette-extended/violet-void-palette.css");
 
 /* ================================
    Layer Definitions
@@ -9,47 +19,49 @@
 
 @layer base {
 	body.theme-dark {
-		/* Core Backgrounds */
-		--background-primary: #0f0f0f;
-		--background-primary-alt: #0e0e0e;
-		--background-secondary: #0e0e0e;
-		--background-secondary-alt: #1b1b1b;
-		--background-modifier-hover: #191919;
-		--background-modifier-border: #313131;
+		/* Core Backgrounds - using palette vars */
+		--background-primary: var(--violet-void-bgHighlight-500);
+		--background-primary-alt: var(--violet-void-bgDark-500);
+		--background-secondary: var(--violet-void-bgDark-500);
+		--background-secondary-alt: var(--violet-void-bgHighlight-400); /* #1b1b1b → #191919 adjusted */
+		--background-modifier-hover: var(--violet-void-bgHighlight-500);
+		--background-modifier-border: var(--violet-void-fgDark-500);
 
-		/* Text Colors */
-		--text-normal: #f0f0f5;
-		--text-muted: #4c4c4c;
-		--text-faint: #303030;
-		--text-on-accent: #0f0f0f;
+		/* Text Colors - using palette vars */
+		--text-normal: var(--violet-void-fg-500);
+		--text-muted: var(--violet-void-fgComment-500);
+		--text-faint: var(--violet-void-fgDark-500);
+		--text-on-accent: var(--violet-void-bgHighlight-500);
 
-		/* Accents - Using Purple as primary */
-		--interactive-accent: #bb7cff;
-		--interactive-accent-hover: #fd7cff;
+		/* Accents - Purple as primary
+		 * Note: #bb7cff is Obsidian-specific (darker purple for UI)
+		 * vs #fd7cff (purpleBright) used in code/tmTheme */
+		--interactive-accent: #bb7cff; /* Obsidian override - subtle accent */
+		--interactive-accent-hover: var(--violet-void-purpleBright-500);
 		--text-accent: #bb7cff;
-		--text-accent-hover: #fd7cff;
+		--text-accent-hover: var(--violet-void-purpleBright-500);
 		--text-selection: rgba(187, 124, 255, 0.25);
 
-		/* Functional Colors */
-		--text-error: #ff004b;
-		--text-success: #42ff97;
-		--text-warning: #ff7c7e;
+		/* Functional Colors - using palette vars */
+		--text-error: var(--violet-void-redBright-500);
+		--text-success: var(--violet-void-green-500);
+		--text-warning: var(--violet-void-orange-500);
 
 		/* UI Elements */
-		--scrollbar-active-thumb-bg: #4c4c4c;
+		--scrollbar-active-thumb-bg: var(--violet-void-fgComment-500);
 		--scrollbar-thumb-bg: rgba(76, 76, 76, 0.5);
-		--tab-outline-color: #313131;
-		--hr-color: #313131;
+		--tab-outline-color: var(--violet-void-fgDark-500);
+		--hr-color: var(--violet-void-fgDark-500);
 
-		/* Code Syntax Highlighting */
-		--code-normal: #f0f0f5;
-		--code-comment: #4c4c4c;
-		--code-function: #29adff;
-		--code-keyword: #bb7cff;
-		--code-value: #ff7c7e;
-		--code-string: #42ff97;
-		--code-tag: #2cbecf;
-		--code-property: #70c8ff;
+		/* Code Syntax Highlighting - synced with tmTheme */
+		--code-normal: var(--violet-void-fg-500);
+		--code-comment: var(--violet-void-fgComment-500);
+		--code-function: var(--violet-void-blue-500); /* #29adff */
+		--code-keyword: var(--violet-void-purpleBright-500); /* #fd7cff */
+		--code-value: var(--violet-void-orange-500);
+		--code-string: var(--violet-void-green-500);
+		--code-tag: var(--violet-void-cyan-500); /* #00a8a4 */
+		--code-property: var(--violet-void-blue-400); /* #53bdff */
 
 		/* Git Gutter */
 		--color-git-added: #144f36;
