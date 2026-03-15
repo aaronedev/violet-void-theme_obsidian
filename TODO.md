@@ -8,10 +8,10 @@
   - Add `:has()` selector usage
   - Add `scroll-snap` where applicable
 
-- [ ] **Accessibility**
+- [x] **Accessibility** (da1d5f4)
   - Add `prefers-reduced-motion` media query
   - Add `prefers-reduced-transparency` media query
-  - Add `prefers-contrast` support
+  - [ ] Add `prefers-contrast` support
 
 ## 🟡 Medium Priority
 
