@@ -13,6 +13,27 @@
 @import url("../palette-extended/violet-void-palette.css");
 
 /* ================================
+   @property Definitions (Animatable Custom Properties)
+   ================================ */
+@property --vv-gradient-angle {
+	syntax: '<angle>';
+	initial-value: 135deg;
+	inherits: false;
+}
+
+@property --vv-focus-ring-width {
+	syntax: '<length>';
+	initial-value: 2px;
+	inherits: false;
+}
+
+@property --vv-border-width {
+	syntax: '<length>';
+	initial-value: 1px;
+	inherits: false;
+}
+
+/* ================================
    Layer Definitions
    ================================ */
 @layer base, components, accessibility;
@@ -83,6 +104,31 @@
 }
 
 @layer components {
+	/* ================================
+	   Scroll Snap for Enhanced UX
+	   ================================ */
+	.workspace-split {
+		scroll-snap-type: both mandatory;
+	}
+
+	.workspace-split > * {
+		scroll-snap-align: start;
+	}
+
+	/* Sidebar scroll snapping */
+	.workspace-sidebar, .modal, .menu {
+		scroll-snap-type: y mandatory;
+	}
+
+	.workspace-tab-container,
+	.workspace-tab-header-inner {
+		scroll-snap-align: start;
+	}
+
+	.workspace-tab-header.is-active {
+		scroll-snap-align: start;
+	}
+
 	.workspace-tab-header.is-active::before,
 	.workspace-tab-header.is-active::after {
 		display: none;

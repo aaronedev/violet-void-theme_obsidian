@@ -2,7 +2,7 @@
 
 ## 🔥 High Priority
 
-- [x] **Modern CSS Features** (d15c919)
+- [x] **Modern CSS Features** (d15c919, f7d6cba)
   - Add `@layer` for cascade control
   - Add `@property` for animatable vars
   - Add `:has()` selector usage
