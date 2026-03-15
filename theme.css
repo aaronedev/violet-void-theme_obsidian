@@ -82,3 +82,30 @@ svg * {
 .menu-separator {
 	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
 }
+
+/* ================================
+   Accessibility - Reduced Motion
+   ================================ */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* ================================
+   Accessibility - Reduced Transparency
+   ================================ */
+@media (prefers-reduced-transparency: reduce) {
+	body.theme-dark {
+		--background-primary: #0f0f0f;
+		--background-secondary: #141414;
+		--background-secondary-alt: #1b1b1b;
+		--background-modifier-hover: #222222;
+		--text-selection: rgba(187, 124, 255, 0.4);
+	}
+}
