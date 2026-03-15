@@ -1,111 +1,171 @@
-body.theme-dark {
-	/* Core Backgrounds */
-	--background-primary: #0f0f0f;
-	--background-primary-alt: #0e0e0e;
-	--background-secondary: #0e0e0e;
-	--background-secondary-alt: #1b1b1b;
-	--background-modifier-hover: #191919;
-	--background-modifier-border: #313131;
-
-	/* Text Colors */
-	--text-normal: #f0f0f5;
-	--text-muted: #4c4c4c;
-	--text-faint: #303030;
-	--text-on-accent: #0f0f0f;
-
-	/* Accents - Using Purple as primary */
-	--interactive-accent: #bb7cff;
-	--interactive-accent-hover: #fd7cff;
-	--text-accent: #bb7cff;
-	--text-accent-hover: #fd7cff;
-	--text-selection: rgba(187, 124, 255, 0.25);
-
-	/* Functional Colors */
-	--text-error: #ff004b;
-	--text-success: #42ff97;
-	--text-warning: #ff7c7e;
-
-	/* UI Elements */
-	--scrollbar-active-thumb-bg: #4c4c4c;
-	--scrollbar-thumb-bg: rgba(76, 76, 76, 0.5);
-	--tab-outline-color: #313131;
-	--hr-color: #313131;
-
-	/* Code Syntax Highlighting */
-	--code-normal: #f0f0f5;
-	--code-comment: #4c4c4c;
-	--code-function: #29adff;
-	--code-keyword: #bb7cff;
-	--code-value: #ff7c7e;
-	--code-string: #42ff97;
-	--code-tag: #2cbecf;
-	--code-property: #70c8ff;
-
-	/* Git Gutter */
-	--color-git-added: #144f36;
-	--color-git-modified: #004f4d;
-	--color-git-deleted: #4f0017;
-}
-
-body {
-	--radius-s: 0px;
-	--radius-m: 0px;
-	--radius-l: 0px;
-	--input-radius: 0px;
-	--tab-radius-active: 0px;
-	--checkbox-radius: 0px;
-	--toggle-radius: 0px;
-	--toggle-thumb-radius: 0px;
-	--slider-thumb-radius: 0px;
-}
-
-.workspace-tab-header.is-active::before,
-.workspace-tab-header.is-active::after {
-	display: none;
-}
-
-svg * {
-	stroke-linecap: square;
-	stroke-linejoin: miter;
-	rx: 0;
-	ry: 0;
-}
-
-.menu {
-	padding: var(--size-2-1);
-}
-
-.menu-item {
-	padding: var(--size-4-1) var(--size-4-2);
-}
-
-.menu-separator {
-	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
-}
+/* Violet Void Obsidian Theme
+ * Pure CSS with custom properties
+ */
 
 /* ================================
-   Accessibility - Reduced Motion
+   Layer Definitions
    ================================ */
-@media (prefers-reduced-motion: reduce) {
-	*,
-	*::before,
-	*::after {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-		scroll-behavior: auto !important;
-	}
-}
+@layer base, components, accessibility;
 
-/* ================================
-   Accessibility - Reduced Transparency
-   ================================ */
-@media (prefers-reduced-transparency: reduce) {
+@layer base {
 	body.theme-dark {
+		/* Core Backgrounds */
 		--background-primary: #0f0f0f;
-		--background-secondary: #141414;
+		--background-primary-alt: #0e0e0e;
+		--background-secondary: #0e0e0e;
 		--background-secondary-alt: #1b1b1b;
-		--background-modifier-hover: #222222;
-		--text-selection: rgba(187, 124, 255, 0.4);
+		--background-modifier-hover: #191919;
+		--background-modifier-border: #313131;
+
+		/* Text Colors */
+		--text-normal: #f0f0f5;
+		--text-muted: #4c4c4c;
+		--text-faint: #303030;
+		--text-on-accent: #0f0f0f;
+
+		/* Accents - Using Purple as primary */
+		--interactive-accent: #bb7cff;
+		--interactive-accent-hover: #fd7cff;
+		--text-accent: #bb7cff;
+		--text-accent-hover: #fd7cff;
+		--text-selection: rgba(187, 124, 255, 0.25);
+
+		/* Functional Colors */
+		--text-error: #ff004b;
+		--text-success: #42ff97;
+		--text-warning: #ff7c7e;
+
+		/* UI Elements */
+		--scrollbar-active-thumb-bg: #4c4c4c;
+		--scrollbar-thumb-bg: rgba(76, 76, 76, 0.5);
+		--tab-outline-color: #313131;
+		--hr-color: #313131;
+
+		/* Code Syntax Highlighting */
+		--code-normal: #f0f0f5;
+		--code-comment: #4c4c4c;
+		--code-function: #29adff;
+		--code-keyword: #bb7cff;
+		--code-value: #ff7c7e;
+		--code-string: #42ff97;
+		--code-tag: #2cbecf;
+		--code-property: #70c8ff;
+
+		/* Git Gutter */
+		--color-git-added: #144f36;
+		--color-git-modified: #004f4d;
+		--color-git-deleted: #4f0017;
 	}
+
+	body {
+		--radius-s: 0px;
+		--radius-m: 0px;
+		--radius-l: 0px;
+		--input-radius: 0px;
+		--tab-radius-active: 0px;
+		--checkbox-radius: 0px;
+		--toggle-radius: 0px;
+		--toggle-thumb-radius: 0px;
+		--slider-thumb-radius: 0px;
+	}
+}
+
+@layer components {
+	.workspace-tab-header.is-active::before,
+	.workspace-tab-header.is-active::after {
+		display: none;
+	}
+
+	svg * {
+		stroke-linecap: square;
+		stroke-linejoin: miter;
+		rx: 0;
+		ry: 0;
+	}
+
+	.menu {
+		padding: var(--size-2-1);
+	}
+
+	.menu-item {
+		padding: var(--size-4-1) var(--size-4-2);
+	}
+
+	.menu-separator {
+		margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+	}
+}
+
+@layer accessibility {
+	/* ================================
+	   Accessibility - Reduced Motion
+	   ================================ */
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+			scroll-behavior: auto !important;
+		}
+	}
+
+	/* ================================
+	   Accessibility - Reduced Transparency
+	   ================================ */
+	@media (prefers-reduced-transparency: reduce) {
+		body.theme-dark {
+			--background-primary: #0f0f0f;
+			--background-secondary: #141414;
+			--background-secondary-alt: #1b1b1b;
+			--background-modifier-hover: #222222;
+			--text-selection: rgba(187, 124, 255, 0.4);
+		}
+	}
+
+	/* ================================
+	   Accessibility - High Contrast
+	   ================================ */
+	@media (prefers-contrast: more) {
+		body.theme-dark {
+			--background-primary: #000000;
+			--background-secondary: #0a0a0a;
+			--background-secondary-alt: #141414;
+			--background-modifier-border: #555555;
+			--text-normal: #ffffff;
+			--text-muted: #888888;
+			--interactive-accent: #d19aff;
+			--text-accent: #d19aff;
+		}
+	}
+}
+
+/* ================================
+   Modern CSS - :has() Selector
+   Parent selector patterns for enhanced styling
+   ================================ */
+
+/* Style grouped headings that have bold content */
+.markdown-preview:has(h1):has(strong),
+.markdown-preview:has(h2):has(strong),
+.markdown-preview:has(h3):has(strong) {
+	border-left: 3px solid var(--interactive-accent);
+	padding-left: var(--size-4-2);
+}
+
+/* Indicate when a code block has errors */
+.markdown-preview pre:has(.tok Err) {
+	border-left: 3px solid var(--text-error);
+}
+
+/* Active states for list items with checkboxes */
+.list-item:has([type="checkbox"]:checked) {
+	opacity: 0.7;
+	text-decoration: line-through;
+}
+
+/* Highlight blocks that contain links */
+.markdown-preview:has(a) {
+	border-radius: var(--radius-m);
 }
